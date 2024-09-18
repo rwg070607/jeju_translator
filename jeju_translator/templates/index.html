@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>제주어 번역기</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename = 'css/style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>제주어 번역기</h1>
+        
+        <form action="/result" method="post">
+            <textarea name = 'textarea'placeholder="번역할 문장 입력"></textarea>
+            <input type="submit" value="번역하기">
+        </form>
+            
+        <div class="output">
+            <h2>번역 결과</h2>
+            <p id="outputText">{{ data }}</p>
+        </div>
+    </div>
+</body>
+<script src="main.js"></script>
+</html>
